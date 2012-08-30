@@ -1,7 +1,7 @@
 # Author: Trevor Perrin
 # See the LICENSE file for legal information regarding use of this file.
 
-from .cryptomath import base64ToBytes
+from cryptomath import base64ToBytes
 import binascii
 
 #This code is shared with tackpy (somewhat), so I'd rather make minimal

@@ -10,17 +10,17 @@ import math
 # Requires Python 2.5
 from hashlib import md5
 from hashlib import sha1 
-
+from array import array
 # Requires Python 2.6, will need to be changed for Python 3
 def createByteArraySequence(seq):
-    return bytearray(seq)
+    return array('B', seq)
 def createByteArrayZeros(howMany):
-    return bytearray(howMany)
+    return array('B', [0] * howMany)
 
 def bytesToString(bytes):
-    return str(bytes)
+    return bytes.tostring()
 def stringToBytes(s):
-    bytes = bytearray(s)
+    bytes = array('B', s)
     return bytes
 
 def numBits(n):

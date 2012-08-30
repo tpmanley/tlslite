@@ -17,7 +17,7 @@ class HTTPTLSConnection(httplib.HTTPConnection, ClientHelper):
     """This class extends L{httplib.HTTPConnection} to support TLS."""
 
     def __init__(self, host, port=None, strict=None, 
-                timeout=socket._GLOBAL_DEFAULT_TIMEOUT,
+                timeout=socket.getdefaulttimeout(),
                 source_address=None,
                 username=None, password=None,
                 certChain=None, privateKey=None,

@@ -8,14 +8,14 @@
 
 """Classes representing TLS messages."""
 
-from .utils.compat import *
-from .utils.cryptomath import *
-from .errors import *
-from .utils.codec import *
-from .constants import *
-from .x509 import X509
-from .x509certchain import X509CertChain
-from .utils.tackwrapper import *
+from utils.compat import *
+from utils.cryptomath import *
+from errors import *
+from utils.codec import *
+from constants import *
+from x509 import X509
+from x509certchain import X509CertChain
+from utils.tackwrapper import *
 
 class RecordHeader3:
     def __init__(self):

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/home/tom/tlslite/env/bin/python
 
 # Author: Trevor Perrin
 # See the LICENSE file for legal information regarding use of this file.
@@ -80,7 +80,7 @@ def handleArgs(argv, argString, flagsList=[]):
     getOptArgString = ":".join(argString) + ":"
     try:
         opts, argv = getopt.getopt(argv, getOptArgString, flagsList)
-    except getopt.GetoptError as e:
+    except getopt.GetoptError, e:
         printError(e) 
     # Default values if arg not present  
     privateKey = None
@@ -284,13 +284,13 @@ def serverCmd(argv):
                                               sessionCache=sessionCache,
                                               settings=settings)
                 stop = time.clock()
-            except TLSRemoteAlert as a:
+            except TLSRemoteAlert, a:
                 if a.description == AlertDescription.user_canceled:
                     print str(a)
                     return False
                 else:
                     raise
-            except TLSLocalAlert as a:
+            except TLSLocalAlert, a:
                 if a.description == AlertDescription.unknown_psk_identity:
                     if username:
                         print "Unknown username"

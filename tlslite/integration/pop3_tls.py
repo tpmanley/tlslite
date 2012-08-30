@@ -12,7 +12,7 @@ class POP3_TLS(POP3, ClientHelper):
     """This class extends L{poplib.POP3} with TLS support."""
 
     def __init__(self, host, port = POP3_SSL_PORT,
-                 timeout=socket._GLOBAL_DEFAULT_TIMEOUT,
+                 timeout=socket.getdefaulttimeout(),
                  username=None, password=None,
                  certChain=None, privateKey=None,
                  checker=None,
